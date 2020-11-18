@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
@@ -12,25 +13,75 @@
 </head>
 
 <body>
-    <header class="header__wrapper">
-        <div class="header__background">
-            <div class="content-wrapper">
-                <h1 class="header__title">
-                    There is no other platforms for you as like
-                </h1>
-                <button class="header__play-button">
-            <div class="header__play-button_rectangle"></div>
-          </button>
-                <button class="header__try-button">TRY NOW</button>
-                <p class="header__subtitle">*No need to add cards details</p>
-            </div>
+    <header class="header">
+        <div class="header__video-wrap">
+            <video class="header__video" id="bg-video" poster="" muted loop>
+          <source src="./videos/Snow-H264 75.mov" />
+        </video>
+        </div>
+        <div class="header__wrapper">
+            <h1 class="header__title">
+                There is no other platforms for you as like
+            </h1>
+            <button class="header__play-button" id="bg-video-btn" onclick="clickedButton()"></button>
+            <button class="header__try-button">TRY NOW</button>
+            <p class="header__subtitle">*No need to add cards details</p>
         </div>
     </header>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta voluptatem excepturi iusto reiciendis nisi unde officiis nam perspiciatis illum consequatur in possimus quos rerum labore delectus minima, totam, optio ad? Amet sed veritatis corrupti aliquam
-        quos sit molestiae id quo culpa, praesentium dolorum expedita similique nobis, laborum recusandae incidunt vel?
-    </p>
-    <script src="./"></script>
+
+    <section class="description flex-ja-center-center">
+        <div class="content-wrapper flex-ja-center-space">
+            <article class="description__text-wrapper">
+                <h3 class="section-subtitle">NEW DESIGN</h3>
+                <h1 class="section-title">
+                    There is no other platforms for you as like
+                    <span class="description__title_pink">....</span>
+                </h1>
+                <p class="section-text">
+                    Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod
+                    semper. Donec sed odio dui. <br />
+                    <br />Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.
+                </p>
+            </article>
+            <div class="description__shape"></div>
+        </div>
+    </section>
+
+    <section class="awesome">
+        <div class="content-wrapper flex-ja-center-center flex-direction-column">
+            <header class="awesome__header">
+                <h3 class="section-subtitle">NEW FEATURES</h3>
+                <h1 class="section-title">Some awesone features</h1>
+            </header>
+            <div class="awesome__card-wrap">
+                <div class="card">
+                    <div class="card__image card__image_picture"></div>
+                    <h2 class="card__title">Some awesone features</h2>
+                    <p class="section-text">
+                        Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card__image card__image_airplane"></div>
+                    <h2 class="card__title">Some awesone features</h2>
+                    <p class="section-text">
+                        Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card__image card__image_bulb"></div>
+                    <h2 class="card__title">Some awesone features</h2>
+                    <p class="section-text">
+                        Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="awesome__bg-image awesome__bg-image_pen"></div>
+        <div class="awesome__bg-image awesome__bg-image_coffee"></div>
+        <div class="awesome__bg-image awesome__bg-image_earphones"></div>
+    </section>
+    <script src="main.js"></script>
 </body>
 
 </html>
