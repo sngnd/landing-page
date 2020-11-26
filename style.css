@@ -156,7 +156,7 @@ body {
 
 .section-text {
     font-size: 1rem;
-    color: #282828;
+    color: #4b4b4b;
 }
 
 .description__shape {
@@ -290,20 +290,9 @@ body {
     width: 40%;
     max-width: 623px;
     height: calc(100% + 15vh);
-    background-color: transparent;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    background-color: #ff6d6d;
     z-index: -10;
-}
-
-@supports (shape-outside: polygon(100% 0, 100% 100%, 0 100%)) {
-    .responsive__background-triangle:before {
-        content: "";
-        float: right;
-        height: 100%;
-        width: 100%;
-        clip-path: polygon(0 0, 0 100%, 100% 100%);
-        shape-outside: polygon(0 0, 0 100%, 100% 100%);
-        background-color: #ff6d6d;
-    }
 }
 
 .clients {
@@ -442,6 +431,7 @@ body {
     color: white;
     font-size: 1rem;
     margin-left: 2rem;
+    cursor: pointer;
 }
 
 .form__button:hover {
@@ -450,6 +440,165 @@ body {
 
 .form__subtext_link {
     color: white;
+}
+
+.footer {
+    width: 100%;
+    height: 40vh;
+    position: relative;
+}
+
+.footer__info {
+    width: 30%;
+}
+
+.footer__about,
+.footer__support {
+    width: 15%;
+}
+
+.footer__logo {
+    height: 48px;
+    width: 103px;
+    background-image: url(./images/Start\ Ex@1X.png);
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+
+.footer__support-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer__support_item {
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+}
+
+.footer__support_item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__about_item {
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+}
+
+.footer__about_item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__about-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer__newsletter {
+    width: 30%;
+    text-align: center;
+}
+
+.footer__newsletter_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__newsletter_input {
+    height: 40px;
+    padding-left: 1rem;
+    background-color: rgba(175, 175, 175, 0.342);
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 3px 0 0 3px;
+    display: inline-block;
+    padding-right: -1px;
+    outline: none;
+}
+
+.footer__newsletter_button {
+    width: 40px;
+    height: 40px;
+    margin-left: -1px;
+    border-radius: 0px 3px 3px 0;
+    background-color: #ff6d6d;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.footer__newsletter_button:hover {
+    background-color: #fd3636;
+}
+
+.footer__newsletter_button-icon {
+    width: 40px;
+    height: 40px;
+    background-image: url(./images/10@1X.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer__socials {
+    display: flex;
+    width: 80%;
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-around;
+    margin: 1rem auto;
+}
+
+.footer__socials_logo {
+    background-position: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+
+.footer__socials_somemedia {
+    width: 20px;
+    height: 20px;
+    background-image: url(./images/dribbble_S@1X.png);
+}
+
+.footer__socials_google {
+    width: 20px;
+    height: 17px;
+    background-image: url(./images/googleplus_S@1X.png);
+}
+
+.footer__socials_facebook {
+    width: 11px;
+    height: 21px;
+    background-image: url(./images/facebook_S@1X.png);
+}
+
+.footer__socials_twitter {
+    width: 19px;
+    height: 17px;
+    background-image: url(./images/twitter_S@1X.png);
+}
+
+.footer__background-triangle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    background-color: #ff6d6d;
+    height: 40vh;
+    z-index: -100;
+}
+
+.footer__header {
+    margin-bottom: 1rem;
+}
+
+.footer__background-triangle:before {
+    content: "";
+    float: right;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    shape-outside: polygon(0 0, 0 100%, 100% 100%);
+    background-color: #ff6d6d;
 }
 
 @media (max-width: 1200px) {
@@ -550,6 +699,87 @@ body {
     .features__header {
         margin: 0;
     }
+    .footer>.content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer__about,
+    .footer__support {
+        width: 100%;
+    }
+    .footer {
+        height: auto;
+    }
+    .footer__header {
+        text-align: center;
+    }
+    .footer__support {
+        order: 1;
+    }
+    .footer__about {
+        order: 2;
+    }
+    .footer__support_item:last-child {
+        margin-bottom: 0.6rem;
+    }
+    .footer__support_item:first-child {
+        margin-top: 0.6rem;
+    }
+    .footer__newsletter {
+        order: 0;
+        width: 100%;
+    }
+    .footer__newsletter_input {
+        width: calc(85% - 40px);
+    }
+    .footer__support>h3,
+    .footer__about>h3,
+    .footer__background-triangle,
+    .footer__info {
+        display: none;
+    }
+    .footer__about,
+    .footer__support {
+        text-align: center;
+        width: 100%;
+    }
+    .footer__socials {
+        width: 40%;
+    }
+}
+
+@media (max-width: 820px) {
+    .features__image {
+        width: 700px;
+    }
+}
+
+@media (max-width: 900px) {
+    .signup__form {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form__input {
+        width: 85%;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .form__button {
+        width: 85%;
+        margin: 0;
+    }
+    .signup {
+        height: auto;
+        padding: 3rem 0;
+    }
+    .footer>.content-wrapper {
+        width: 90%;
+    }
+    .footer__background-triangle {
+        display: none;
+    }
 }
 
 @media (min-width: 701px) and (max-width: 1280px) {
@@ -573,34 +803,6 @@ body {
     }
     .signup>.content-wrapper {
         width: 90%;
-    }
-}
-
-@media (max-width: 900px) {
-    .signup__form {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .form__input {
-        width: 60%;
-        margin: 0;
-        margin-bottom: 1rem;
-    }
-    .form__button {
-        width: 60%;
-        margin: 0;
-    }
-    .signup {
-        height: auto;
-        padding: 3rem 0;
-    }
-}
-
-@media (max-width: 820px) {
-    .features__image {
-        width: 700px;
     }
 }
 
